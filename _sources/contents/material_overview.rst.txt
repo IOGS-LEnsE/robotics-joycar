@@ -1,9 +1,7 @@
 Overview of the platform
 ========================
 
-The **LEnsE** team developped a platform to reproduce a part of an **industrial system of machine vision**.
-
-Machine Vision platform is a combination of a **conveyor** driven in movement by a **step motor**, a sorting system, a **CMOS industrial sensor** and a **lighting system**.
+**Joy-It Car** is a platform ...
 
 PICTURE OF THE SYSTEM
 
@@ -12,57 +10,21 @@ PICTURE OF THE SYSTEM
 Materials
 ---------
 
-Conveyor and sorting system
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-This platform is mainly based on a **Dobot conveyor** that permits to transport small pieces 
-
-Step Motor
-""""""""""
-
-Sensors
-"""""""
-
-Three **SEN0239** infrared presence detectors could be implemented on the board.
-
-SCHEMA ?
-
-A digital output is at a **high level** when an object is detected close to the sensor and at a low level when no object is detected. The sensibility (i.e. the detection distance) can be set up by modifying the value of a potentiometer using a screwdriver.
-
-
-Sorter System
+GPIO Expander
 ~~~~~~~~~~~~~
 
-The conveyor is equiped with three home-made sorter systems, based on a servomotor.
+The GPIO Expander is a PF574A. Its I2C address is 0x38.
 
-IMAGE ?
-
-
+Connections to the different sensors is given in the Joy-It Car manual.
 
 
-CMOS Sensor
-~~~~~~~~~~~
+PWM Controller for motors
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The CMOS Camera is a **Basler** *XXXX*. The **Pylon Camera Software Suite** is a software package comprised of an easy-to-use SDK, drivers, configuration tools and vTools that you can use to operate any Basler camera and utilize image processing using a Windows PC.
+The PWM controller and motor driver is a PCA9633. Its I2C address is 0x70.
 
-IMAGE OF THE SENSOR
+Channels 2, 3, 4 and 5 are used for controlling left motor (channels 2 and 3) and right motor (channels 4 and 5).
 
-You can also interface this camera with a Python program, using the `PyPylon library <https://github.com/basler/pypylon>`_.
+|
 
-An example based on the PyPylon library is given on this GitHub page : https://github.com/IOGS-Digital-Methods/SupOpNumTools/blob/main/src/SupOpNumTools/camera/cameraBasler.py
-
-More details on the `Basler Documentation Website <https://www.baslerweb.fr/fr/20-cameras-matricielles>`_.
-
-| 
-
-Electronic control board
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-This platform is associated to an **electronic board** for controlling : the translation of the conveyor, the activation of each sorting system, the activation of the lighting system.
-
-.. note::
-	This board can be used to control 2 different step-motors.
-
-IMAGE OF THE BOARD
-
-
+An initialization phase is required : sending 2 bytes with values {0x00 0x01}, and then 2 other bytes with values {0xE8 0xAA} (procedure found in the micropython library examples given by Joy-It).

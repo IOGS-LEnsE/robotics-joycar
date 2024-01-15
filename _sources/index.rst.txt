@@ -14,9 +14,10 @@ The GitHub repository of this project : `Robotics JoyCar <https://github.com/IOG
 
 |
 
-This platform is initialy designed to work with a *Micro:bit* microcontroller board that can be programed in *MicroPython*.
+This platform was initialy designed to work with a *Micro:bit* microcontroller board that can be programed in *MicroPython*.
 
-Embedded electronics teached at **Institut d'Optique** for future photonics engineers is based on Nucleo board, including *STMicroelectronics* STM32 microcontrollers. A complete version of drivers for MBED-6 operating system is still in development.
+Embedded electronics teached at **Institut d'Optique** for future photonics engineers is based on Nucleo board, including *STMicroelectronics* STM32 microcontrollers. 
+A complete version of drivers for MBED-6 operating system is still in development.
 
 |
 
@@ -26,7 +27,6 @@ Embedded electronics teached at **Institut d'Optique** for future photonics engi
    :caption: Materials
 
 	Overview<contents/material_overview>
-	Electronic board<contents/material_board>
 	Testing procedure<contents/material_testing>
 
 .. toctree::
