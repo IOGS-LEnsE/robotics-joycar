@@ -1,4 +1,4 @@
-.. Machine-Vision platform documentation master file, created by
+.. Joy-It Car platform documentation master file, created by
    sphinx-quickstart on Sat Jan 13.
    You can adapt this file completely to your liking, but it should at least contain the root `toctree` directive.
 
@@ -14,7 +14,9 @@ The GitHub repository of this project : `Robotics JoyCar <https://github.com/IOG
 
 |
 
-This platform was initialy designed to work with a *Micro:bit* microcontroller board that can be programed in *MicroPython*.
+This platform was initialy designed by **Joy-It** to work with a *Micro:bit* microcontroller board that can be programed in *MicroPython*.
+
+You will find more informations about the original Joy-It Car platform on the `JoyCar website <https://joycar.joy-it.net/en/>`_.
 
 Embedded electronics teached at **Institut d'Optique** for future photonics engineers is based on Nucleo board, including *STMicroelectronics* STM32 microcontrollers. 
 A complete version of drivers for MBED-6 operating system is still in development.

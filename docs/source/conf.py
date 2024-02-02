@@ -16,10 +16,10 @@ import sys
 
 # -- Project information -----------------------------------------------------
 
-project = 'Machine Vision Platform - LEnsE / IOGS'
+project = 'Joy-It Car Platform - LEnsE / IOGS'
 copyright = '2023, Julien Villemejane'
 author = 'Julien Villemejane'
-release = '0.2'
+release = '0.1'
 
 
 # -- General configuration ---------------------------------------------------
