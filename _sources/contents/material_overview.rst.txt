@@ -62,22 +62,22 @@ Depending on the direction and the speed, you can affect value as mentionned in 
      - :cspan:`1` RIGHT Motor
      - :cspan:`1` LEFT Motor
    * - Function
-	 - PWM0
+     - PWM0
      - PWM1
      - PWM2
      - PWM3
    * - Strong Braking
-	 - 0
+     - 0
      - 0
      - 0
      - 0
    * - Soft Braking
-	 - 255
+     - 255
      - 255
      - 255
      - 255
    * - Go Forward
-	 - 0
+     - 0
      - PWM
      - 0
      - PWM
@@ -85,9 +85,11 @@ Depending on the direction and the speed, you can affect value as mentionned in 
      - PWM
      - 0
      - PWM
-	 - 0
+     - 0
    * - Turn Left
-	 - 0
-	 - 0
+     - 0
+     - 0
      - 0
      - PWM
+
+Test
