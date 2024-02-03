@@ -52,3 +52,42 @@ Each motor of the JoyCar platform uses 2 PWM channels of the PCA9633 to be contr
    * - PWM3
      - 0x05
 
+Depending on the direction and the speed, you can affect value as mentionned in the next table (from Joy-It JoyCar documentation) :
+
+.. flat-table:: Driving control of the JoyCar platform
+   :widths: 20 20 20 20 20
+   :header-rows: 2
+
+   * - 
+     - :cspan:`1` RIGHT Motor
+     - :cspan:`1` LEFT Motor
+   * - Function
+	 - PWM0
+     - PWM1
+     - PWM2
+     - PWM3
+   * - Strong Braking
+	 - 0
+     - 0
+     - 0
+     - 0
+   * - Soft Braking
+	 - 255
+     - 255
+     - 255
+     - 255
+   * - Go Forward
+	 - 0
+     - PWM
+     - 0
+     - PWM
+   * - Go Reverse
+     - PWM
+     - 0
+     - PWM
+	 - 0
+   * - Turn Left
+	 - 0
+	 - 0
+     - 0
+     - PWM
