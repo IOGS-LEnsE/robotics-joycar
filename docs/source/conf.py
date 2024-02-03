@@ -31,7 +31,8 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.napoleon',
     'sphinx.ext.autosummary',
-    'sphinx_rtd_theme'
+    'sphinx_rtd_theme',
+    'linuxdoc.rstFlatTable'
 ]
 
 # Add any paths that contain templates here, relative to this directory.

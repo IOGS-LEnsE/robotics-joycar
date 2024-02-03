@@ -34,7 +34,7 @@ PWM Channels
 
 Each motor of the JoyCar platform uses 2 PWM channels of the PCA9633 to be controlled in two directions.
 
-.. list-table:: Title
+.. flat-table:: PCA9633 PWM channels
    :widths: 20 20 20
    :header-rows: 1
 
