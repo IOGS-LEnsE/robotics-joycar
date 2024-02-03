@@ -50,6 +50,7 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">     Overview</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#materials">Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lights">Lights</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#gpio-expander">GPIO Expander</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pwm-controller-for-motors">PWM Controller for motors</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#initialization-of-the-pwm-driver">Initialization of the PWM driver</a></li>
@@ -96,6 +97,13 @@
 <p>PICTURE OF THE SYSTEM</p>
 <section id="materials">
 <h2>Materials<a class="headerlink" href="#materials" title="Link to this heading"></a></h2>
+</section>
+<section id="lights">
+<h2>Lights<a class="headerlink" href="#lights" title="Link to this heading"></a></h2>
+<p>There are 4 headlights on the robot. Each headlight is composed of 2 addressable WS2812B RGB LEDs.</p>
+<p>The first LED data input is connected to the <em>P0</em> expansion board of the platform.</p>
+<p>The control of that kind of LEDs uses the LEnsE <a class="reference external" href="https://github.com/IOGS-LEnsE-embedded/MBED6_SupOpLibraries/tree/main/WS2812">WS2812 library</a>  for MBED6.</p>
+<p>LEDs are powered up by the battery through a 5V voltage regulator on the expansion board of the platform.</p>
 </section>
 <section id="gpio-expander">
 <h2>GPIO Expander<a class="headerlink" href="#gpio-expander" title="Link to this heading"></a></h2>

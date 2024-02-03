@@ -10,6 +10,18 @@ PICTURE OF THE SYSTEM
 Materials
 ---------
 
+Lights
+------
+
+There are 4 headlights on the robot. Each headlight is composed of 2 addressable WS2812B RGB LEDs.
+
+The first LED data input is connected to the *P0* expansion board of the platform.
+
+The control of that kind of LEDs uses the LEnsE `WS2812 library <https://github.com/IOGS-LEnsE-embedded/MBED6_SupOpLibraries/tree/main/WS2812>`_  for MBED6.
+
+LEDs are powered up by the battery through a 5V voltage regulator on the expansion board of the platform.
+
+
 GPIO Expander
 -------------
 
