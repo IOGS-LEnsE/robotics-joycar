@@ -104,4 +104,13 @@ Depending on the direction and the speed, you can affect value as mentionned in 
      - 0
      - PWM
 
-Test
+
+US Sensor
+---------
+
+US Sensor Trigger is on pin *P8* and US Sensor Echo is on pin *P12* of the expansion board.
+
+Servomotors
+-----------
+
+Servo 1 is on pin *P1* and Servo 2 is on pin *P2* of the expansion board.
