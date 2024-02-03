@@ -49,9 +49,11 @@
               <p class="caption" role="heading"><span class="caption-text">Materials</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">     Overview</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#materials">Materials</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#gpio-expander">GPIO Expander</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#pwm-controller-for-motors">PWM Controller for motors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#materials">Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gpio-expander">GPIO Expander</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pwm-controller-for-motors">PWM Controller for motors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#initialization-of-the-pwm-driver">Initialization of the PWM driver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pwm-channels">PWM Channels</a></li>
 </ul>
 </li>
 </ul>
@@ -94,19 +96,22 @@
 <p>PICTURE OF THE SYSTEM</p>
 <section id="materials">
 <h2>Materials<a class="headerlink" href="#materials" title="Link to this heading"></a></h2>
+</section>
 <section id="gpio-expander">
-<h3>GPIO Expander<a class="headerlink" href="#gpio-expander" title="Link to this heading"></a></h3>
+<h2>GPIO Expander<a class="headerlink" href="#gpio-expander" title="Link to this heading"></a></h2>
 <p>The GPIO Expander is a PF574A. Its I2C address is 0x38.</p>
 <p>Connections to the different sensors is given in the Joy-It Car manual.</p>
 </section>
 <section id="pwm-controller-for-motors">
-<h3>PWM Controller for motors<a class="headerlink" href="#pwm-controller-for-motors" title="Link to this heading"></a></h3>
+<h2>PWM Controller for motors<a class="headerlink" href="#pwm-controller-for-motors" title="Link to this heading"></a></h2>
 <p>The PWM controller and motor driver is a PCA9633. Its I2C address is 0x70.</p>
-<p>Channels 2, 3, 4 and 5 are used for controlling left motor (channels 2 and 3) and right motor (channels 4 and 5).</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
+<section id="initialization-of-the-pwm-driver">
+<h3>Initialization of the PWM driver<a class="headerlink" href="#initialization-of-the-pwm-driver" title="Link to this heading"></a></h3>
 <p>An initialization phase is required : sending 2 bytes with values {0x00 0x01}, and then 2 other bytes with values {0xE8 0xAA} (procedure found in the micropython library examples given by Joy-It).</p>
+</section>
+<section id="pwm-channels">
+<h3>PWM Channels<a class="headerlink" href="#pwm-channels" title="Link to this heading"></a></h3>
+<p>Each motor of the JoyCar platform uses 2 PWM channels of the PCA9633 to be controlled in two directions.</p>
 </section>
 </section>
 </section>
