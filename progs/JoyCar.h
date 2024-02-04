@@ -20,9 +20,9 @@
 
 #include "mbed.h"
 #include "WS2812.h"
-#include <cstdint>
 
 /** Constant definition */
+#define     DEBUG_JOYCAR    true
 // Frequency of the I2C communication port - PWM control and GPIO Expander
 #define JOYCAR_I2C_FREQ   400000
 
@@ -37,6 +37,9 @@
 #define JOYCAR_MOTOR_PWM1_REG    0x03 
 #define JOYCAR_MOTOR_PWM2_REG    0x04 
 #define JOYCAR_MOTOR_PWM3_REG    0x05 
+#define JOYCAR_MOTOR_MODE0_REG   0x00 
+#define JOYCAR_MOTOR_MODE1_REG   0x01 
+#define JOYCAR_MOTOR_LEDOUT_REG  0x08
 
 // Headlights
 #define NB_LEDS_PER_HEADLIGHTS  2
@@ -56,13 +59,6 @@ class JoyCar_Motor {
     private:
         /// I2C interface 
         I2C *__i2c;
-        /**
-        * @brief Send dutycycle to a specific PWM channel
-        * @param ch PWM channel reg address of the PCA9633 - integer from 0 to 3
-        * @param value Dutycycle value - integer from 0 to 255
-        * @return true if acknowledgement from PCA9633 is OK
-        */
-        bool sendSpeed(uint8_t ch_add, char val);
     
     public:
         /**
@@ -74,6 +70,19 @@ class JoyCar_Motor {
         */
         JoyCar_Motor(I2C *_i2c);
 
+        /**
+        * @brief Send dutycycle to a specific PWM channel
+        * @param ch PWM channel reg address of the PCA9633 - integer from 0 to 3
+        * @param value Dutycycle value - integer from 0 to 255
+        * @return true if acknowledgement from PCA9633 is OK
+        */
+        bool sendSpeed(uint8_t ch_add, char val);
+        
+        /**
+        * @brief Reset the PWM controller with specific I2C reset address
+        * @return true if acknowledgement from PCA9633 is OK
+        */
+        bool hardResetPWM();
         /**
         * @brief Initialize the PWM controller PCA9633
         * @return true if acknowledgement from PCA9633 is OK
