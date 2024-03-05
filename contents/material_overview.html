@@ -53,6 +53,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#lights">Lights</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#gpio-expander">GPIO Expander</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pwm-controller-for-motors">PWM Controller for motors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#hardware-reset-of-the-pwm-driver">Hardware Reset of the PWM driver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#initialization-of-the-pwm-driver">Initialization of the PWM driver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pwm-channels">PWM Channels</a></li>
 </ul>
@@ -115,6 +116,10 @@
 <section id="pwm-controller-for-motors">
 <h2>PWM Controller for motors<a class="headerlink" href="#pwm-controller-for-motors" title="Link to this heading"></a></h2>
 <p>The PWM controller and motor driver is a PCA9633. Its I2C address is 0x70.</p>
+<section id="hardware-reset-of-the-pwm-driver">
+<h3>Hardware Reset of the PWM driver<a class="headerlink" href="#hardware-reset-of-the-pwm-driver" title="Link to this heading"></a></h3>
+<p>An hardware reset is required before using the PCA9633 driver. To do this reset, the microcontroller must send by the I2C transmission line the 2 bytes {0xA5, 0X5A}.</p>
+</section>
 <section id="initialization-of-the-pwm-driver">
 <h3>Initialization of the PWM driver<a class="headerlink" href="#initialization-of-the-pwm-driver" title="Link to this heading"></a></h3>
 <p>An initialization phase is required : sending 2 bytes with values {0x00 0x01}, and then 2 other bytes with values {0xE8 0xAA} (procedure found in the micropython library examples given by Joy-It).</p>

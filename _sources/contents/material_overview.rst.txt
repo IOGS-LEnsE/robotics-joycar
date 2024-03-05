@@ -35,6 +35,11 @@ PWM Controller for motors
 
 The PWM controller and motor driver is a PCA9633. Its I2C address is 0x70.
 
+Hardware Reset of the PWM driver
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+An hardware reset is required before using the PCA9633 driver. To do this reset, the microcontroller must send by the I2C transmission line the 2 bytes {0xA5, 0X5A}.
+
 
 Initialization of the PWM driver
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
